@@ -1,0 +1,683 @@
+/* ===== JCI UNIBEN JOIN PAGE STYLES ===== */
+/* Built to complement the main stylesheet with consistent branding */
+
+/* ===== HERO OVERLAY SECTION ===== */
+section {
+  background: var(--hero-gradient);
+  color: var(--jci-white);
+  padding: 8rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1.5" fill="rgba(255,215,0,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.2)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  animation: float 20s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.overlay {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  animation: fadeInUp var(--animation-duration) ease-out;
+}
+
+.overlay h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--jci-white) 0%,
+    var(--jci-gold) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInFromLeft var(--animation-duration) ease-out;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  animation: slideInFromRight var(--animation-duration) ease-out 0.3s both;
+}
+
+.breadcrumb a {
+  color: var(--jci-gold);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--jci-gold);
+  border-radius: 50px;
+  transition: var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+}
+
+.breadcrumb a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--jci-gold);
+  transition: var(--transition-smooth);
+  z-index: -1;
+}
+
+.breadcrumb a:hover {
+  color: var(--jci-dark-blue);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+.breadcrumb a:hover::before {
+  left: 0;
+}
+
+/* ===== FORM CONTAINER ===== */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: var(--jci-white);
+  position: relative;
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--gold-gradient);
+  border-radius: 2px;
+}
+
+/* ===== HEADER SECTION ===== */
+.text-c {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInUp var(--animation-duration) ease-out 0.2s both;
+}
+
+.text-c .text-4 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--jci-dark-blue);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.text-c .text-4::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--gold-gradient);
+  border-radius: 2px;
+}
+
+.text-c .text-l {
+  font-size: 1.25rem;
+  color: var(--jci-blue);
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===== PAYMENT INFO SECTION ===== */
+.payment-info {
+  background: linear-gradient(
+    135deg,
+    var(--jci-cream) 0%,
+    rgba(255, 248, 220, 0.5) 100%
+  );
+  border: 2px solid var(--jci-gold);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  animation: slideInFromBottom var(--animation-duration) ease-out 0.4s both;
+  box-shadow: 0 10px 30px rgba(0, 51, 102, 0.1);
+}
+
+.payment-info::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--gold-gradient);
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.payment-info:hover::before {
+  opacity: 0.1;
+}
+
+.payment-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--jci-dark-blue);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.payment-info h3::before {
+  content: "💳";
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+.payment-info p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: var(--jci-dark-blue);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.payment-info p strong {
+  color: var(--jci-blue);
+  font-weight: 600;
+  min-width: 150px;
+}
+
+.payment-info .note {
+  background: rgba(255, 215, 0, 0.1);
+  border-left: 4px solid var(--jci-gold);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+.payment-info .note::before {
+  content: "⚠️";
+  position: absolute;
+  top: 1rem;
+  left: -12px;
+  background: var(--jci-gold);
+  color: var(--jci-dark-blue);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+
+/* ===== REGISTER BUTTON ===== */
+.register-button {
+  display: block;
+  background: var(--primary-gradient);
+  color: var(--jci-white);
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-bounce);
+  box-shadow: 0 10px 30px rgba(0, 51, 102, 0.3);
+  animation: slideInFromLeft var(--animation-duration) ease-out 0.6s both;
+  border: 3px solid transparent;
+}
+
+.register-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gold-gradient);
+  transition: var(--transition-smooth);
+  z-index: -1;
+}
+
+.register-button::after {
+  content: "📝";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.register-button:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 51, 102, 0.4);
+  border-color: var(--jci-gold);
+  color: var(--jci-dark-blue);
+}
+
+.register-button:hover::before {
+  left: 0;
+}
+
+.register-button:hover::after {
+  transform: translateY(-50%) rotate(15deg) scale(1.2);
+}
+
+/* ===== WHATSAPP SECTION ===== */
+.whatsapp-channel-section {
+  background: linear-gradient(
+    135deg,
+    rgba(37, 211, 102, 0.1) 0%,
+    rgba(37, 211, 102, 0.05) 100%
+  );
+  border: 2px solid #25d366;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+  animation: slideInFromRight var(--animation-duration) ease-out 0.8s both;
+}
+
+.whatsapp-channel-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(37, 211, 102, 0.1) 0%,
+    transparent 70%
+  );
+  animation: rotate 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.whatsapp-channel-section p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--jci-dark-blue);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #25d366;
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: var(--transition-bounce);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+  transition: var(--transition-smooth);
+  z-index: -1;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-button:hover::before {
+  left: 0;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  transition: var(--transition-smooth);
+}
+
+.whatsapp-button:hover .whatsapp-icon {
+  transform: rotate(15deg) scale(1.1);
+  animation: wiggle 0.8s ease-in-out;
+}
+
+/* ===== ENHANCED MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 6rem 0 3rem;
+    min-height: 50vh;
+  }
+
+  .overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-container {
+    padding: 3rem 1.5rem;
+    margin: 0 1rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.1);
+  }
+
+  .payment-info {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .payment-info p {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .payment-info p strong {
+    min-width: auto;
+  }
+
+  .register-button {
+    padding: 1.25rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  .whatsapp-channel-section {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .whatsapp-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .text-c .text-4 {
+    font-size: 2rem;
+  }
+
+  .text-c .text-l {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .form-container {
+    padding: 2rem 1rem;
+    margin: 0 0.5rem;
+  }
+
+  .payment-info {
+    padding: 1.5rem;
+  }
+
+  .payment-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .register-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    margin: 2rem auto;
+  }
+
+  .whatsapp-channel-section {
+    padding: 1.5rem;
+  }
+
+  .whatsapp-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .breadcrumb a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+.payment-info:focus-within {
+  outline: 3px solid var(--jci-gold);
+  outline-offset: 2px;
+}
+
+.register-button:focus,
+.whatsapp-button:focus {
+  outline: 3px solid var(--jci-gold);
+  outline-offset: 4px;
+}
+
+/* ===== HIGH CONTRAST MODE SUPPORT ===== */
+@media (prefers-contrast: high) {
+  .payment-info {
+    background: var(--jci-white);
+    border: 3px solid var(--jci-dark-blue);
+  }
+
+  .whatsapp-channel-section {
+    background: var(--jci-white);
+    border: 3px solid #25d366;
+  }
+
+  .register-button {
+    border: 3px solid var(--jci-white);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  section {
+    background: none;
+    color: black;
+    padding: 2rem 0;
+  }
+
+  .register-button,
+  .whatsapp-button {
+    display: none;
+  }
+
+  .payment-info {
+    border: 2px solid #ccc;
+    background: #f9f9f9;
+  }
+
+  .whatsapp-channel-section {
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+  }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+.register-button,
+.whatsapp-button,
+.payment-info {
+  will-change: transform;
+}
+
+/* GPU acceleration for smooth animations */
+.overlay h1,
+.register-button::before,
+.whatsapp-button::before,
+.whatsapp-channel-section::before {
+  transform: translateZ(0);
+}
+
+/* ===== LOADING STATES ===== */
+.register-button.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.register-button.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  border: 2px solid var(--jci-white);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* ===== ENHANCED VISUAL EFFECTS ===== */
+.form-container {
+  background: linear-gradient(
+    135deg,
+    var(--jci-white) 0%,
+    rgba(255, 248, 220, 0.3) 100%
+  );
+  box-shadow: 0 20px 60px rgba(0, 51, 102, 0.1);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* ===== HOVER ANIMATIONS FOR BETTER UX ===== */
+.payment-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0, 51, 102, 0.15);
+}
+
+.whatsapp-channel-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.2);
+}
+
+/* ===== CUSTOM FOCUS INDICATORS ===== */
+.breadcrumb a:focus {
+  box-shadow: 0 0 0 3px var(--jci-gold), 0 0 0 6px rgba(255, 215, 0, 0.3);
+}
+
+/* ===== SUCCESS/COMPLETION STATES ===== */
+.form-container.success {
+  border-color: #28a745;
+  background: linear-gradient(
+    135deg,
+    rgba(40, 167, 69, 0.05) 0%,
+    var(--jci-white) 100%
+  );
+}
+
+.form-container.success::before {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+/* ===== MICRO-INTERACTIONS ===== */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.05);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.payment-info .note:hover {
+  animation: heartbeat 1.5s ease-in-out;
+}
+
+/* ===== FINAL POLISH ===== */
+/* Smooth page entrance */
+.form-container {
+  animation: slideInFromBottom 1s ease-out;
+}
+
+/* Enhanced button states */
+.register-button:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+.whatsapp-button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Consistent spacing system */
+.form-container > * + * {
+  margin-top: 2rem;
+}
+
+/* ===== END OF JOIN PAGE STYLES =====*/

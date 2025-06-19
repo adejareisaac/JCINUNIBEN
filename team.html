@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Our Team - JCI UNIBEN</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="team.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="images/logo.PNG" alt="JCIN UNIBEN Logo" />
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="about.html">About ▼</a>
+              <div class="dropdown-content">
+                <a href="team.html">Our Team</a>
+                <a href="impact.html">Our Impact</a>
+              </div>
+            </li>
+            <li>
+              <a href="join.html">Registration</a>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="join.html" class="cta-button">JOIN NOW</a>
+      </div>
+    </header>
+    <div class="overlay">
+      <h1>About Us</h1>
+      <div class="breadcrumb"><a href="index.html"> - About Us</a></div>
+    </div>
+    <section class="max-w">
+      <header class="text-center">
+        <h1 class="leading-tight">Meet Our Dynamic Team</h1>
+        <p class="texts">
+          Dedicated leaders driving impact and fostering growth within JCI
+          UNIBEN. Get to know the faces behind our initiatives.
+        </p>
+      </header>
+
+      <div class="grid">
+        <!-- Team Member 1 -->
+        <div class="team-card">
+          <img
+            src="https://placehold.co/120x120/a5b4fc/4338ca?text=Director+1"
+            alt="Directorate Member 1 Headshot"
+            class="team-member-img"
+            onerror="this.onerror=null;this.src='https://placehold.co/120x120/e2e8f0/7b879c?text=Image';"
+          />
+          <h3 class="text">Jane Doe</h3>
+          <p class="text-m">Director of Programs</p>
+          <!-- Optional: Add a short bio or social links here -->
+          <!-- <p class="text-sm text-gray-500 mt-2">Leading innovative initiatives for member development.</p> -->
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-card">
+          <img
+            src="https://placehold.co/120x120/bfdbfe/1e40af?text=Director+2"
+            alt="Directorate Member 2 Headshot"
+            class="team-member-img"
+            onerror="this.onerror=null;this.src='https://placehold.co/120x120/e2e8f0/7b879c?text=Image';"
+          />
+          <h3 class="text">John Smith</h3>
+          <p class="text-m">Director of Finance</p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-card">
+          <img
+            src="https://placehold.co/120x120/a7f3d0/059669?text=Director+3"
+            alt="Directorate Member 3 Headshot"
+            class="team-member-img"
+            onerror="this.onerror=null;this.src='https://placehold.co/120x120/e2e8f0/7b879c?text=Image';"
+          />
+          <h3 class="text">Alice Johnson</h3>
+          <p class="text-m">Director of Public Relations</p>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="team-card">
+          <img
+            src="https://placehold.co/120x120/fecaca/dc2626?text=Director+4"
+            alt="Directorate Member 4 Headshot"
+            class="team-member-img"
+            onerror="this.onerror=null;this.src='https://placehold.co/120x120/e2e8f0/7b879c?text=Image';"
+          />
+          <h3 class="text">David Lee</h3>
+          <p class="text-m">Director of Membership</p>
+        </div>
+
+        <!-- You can easily add a fifth member by uncommenting and duplicating this block: -->
+        <!--
+            <div class="team-card">
+                <img
+                    src="https://placehold.co/120x120/ffedd5/f97316?text=Director+5"
+                    alt="Directorate Member 5 Headshot"
+                    class="team-member-img"
+                    onerror="this.onerror=null;this.src='https://placehold.co/120x120/e2e8f0/7b879c?text=Image';"
+                >
+                <h3 class="text-xl font-bold text-gray-900 mb-1">Emily White</h3>
+                <p class="text-md text-indigo-700 font-medium">Director of Training</p>
+            </div>
+            -->
+      </div>
+    </section>
+    <footer>
+      <div class="max">
+        <!-- JCIN UNIBEN Logo & Description -->
+        <div>
+          <h2 class="text-x">JCIN UNIBEN</h2>
+          <p class="leading-relaxed">
+            Junior Chamber International UNIBEN is a leadership organization for
+            students' committed to creating positive change within and beyond
+            the University of Benin.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-semibold">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="/home" class="hover:underline">Home</a></li>
+            <li>
+              <a href="/register" class="hover:underline">Registration</a>
+            </li>
+            <li>
+              <a href="/about/mission" class="hover:underline">Our Mission</a>
+            </li>
+            <li><a href="/about/team" class="hover:underline">Our Team</a></li>
+            <li><a href="/contact" class="hover:underline">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect With Us -->
+        <div>
+          <h3 class="font-semibold">Connect With Us</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="https://instagram.com/jcinuniben"
+                target="_blank"
+                class="hover:underline"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/jcinuniben"
+                target="_blank"
+                class="hover:underline"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/company/jcinuniben"
+                target="_blank"
+                class="hover:underline"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="mailto:jcinuniben@gmail.com" class="hover:underline"
+                >jcinuniben@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter or Motto -->
+        <div>
+          <h3 class="fon">Our Motto</h3>
+          <p class="italic">"Be Better"</p>
+          <p class="mt">Empowering young people to create positive change.</p>
+        </div>
+      </div>
+      <!-- Bottom Bar -->
+      <div class="border">© 2025 JCIN UNIBEN. All Rights Reserved.</div>
+    </footer>
+  </body>
+</html>

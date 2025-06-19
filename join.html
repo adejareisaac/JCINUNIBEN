@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register with JCI UNIBEN</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="join.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="images/logo.png" alt="JCIN UNIBEN Logo" />
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="about.html">About ▼</a>
+              <div class="dropdown-content">
+                <a href="team.html">Our Team</a>
+                <a href="impact.html">Our Impact</a>
+              </div>
+            </li>
+
+            <li><a href="join.html">Registration</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="join.html" class="cta-button">JOIN NOW</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section>
+      <div class="overlay">
+        <h1>Join Now</h1>
+        <div class="breadcrumb">
+          <a href="index.html"> Home</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="registration-form-section" class="form-container">
+      <header class="text-c">
+        <h1 class="text-4">Join JCI UNIBEN</h1>
+        <p class="text-l">Embark on a journey of personal growth and impact.</p>
+      </header>
+      <div class="payment-info">
+        <h3>Membership Payment Details</h3>
+        <p>
+          <strong>Organization:</strong> Junior Chamber International UNIBEN
+        </p>
+        <p>
+          <strong>Bank Name:</strong>
+          <span style="color: #007bff; font-weight: bold"
+            >[Insert Your Bank Name Here, e.g., First Bank of Nigeria PLC]</span
+          >
+        </p>
+        <p>
+          <strong>Account Number:</strong>
+          <span style="color: #007bff; font-weight: bold"
+            >[Insert Your Account Number Here, e.g., 3123456789]</span
+          >
+        </p>
+        <p>
+          <strong>Amount:</strong>
+          <span style="color: #2e7d32; font-weight: bold">#1000 NGN</span>
+          (Non-refundable membership fee)
+        </p>
+        <p class="note">
+          **IMPORTANT:** Please make the #1000 NGN payment to the account above
+          *before* proceeding to the registration form. You will need to upload
+          proof of payment (screenshot or PDF) during registration.
+        </p>
+      </div>
+
+      <a
+        href="https://forms.gle/DeFrVbS2vDjbrZLG6"
+        target="_blank"
+        class="register-button"
+      >
+        Proceed to Registration Form
+      </a>
+
+      <div class="whatsapp-channel-section">
+        <p>
+          **Already registered?** Join our vibrant community on WhatsApp to stay
+          updated, connect with members, and participate in discussions!
+        </p>
+        <a
+          href="https://chat.whatsapp.com/DLxRFSCoAXe8Ia9UqycMrr"
+          target="_blank"
+          class="whatsapp-button"
+        >
+          <svg
+            class="whatsapp-icon"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.58 15.36 3.44 16.86L2 22L7.38 20.61C8.87 21.46 10.49 21.91 12.04 21.91C17.5 21.91 21.95 17.46 21.95 12.04C21.95 6.58 17.5 2 12.04 2ZM17.18 15.77C16.94 16.21 16.14 16.63 15.65 16.73C15.15 16.84 14.65 16.86 14.15 16.7C13.68 16.54 12.78 16.2 11.75 15.34C10.09 13.92 9.07 12.24 8.77 11.72C8.47 11.2 8.16 10.68 8.15 10.15C8.15 9.62 8.36 9.38 8.64 9.1C8.92 8.82 9.27 8.39 9.61 8.08C9.94 7.76 10.27 7.75 10.51 7.75C10.75 7.75 11 7.85 11.23 8.3C11.5 8.74 11.97 9.87 12.07 10.09C12.18 10.31 12.35 10.55 12.44 10.66C12.54 10.77 12.63 10.88 12.74 11.02C12.85 11.16 12.97 11.31 13.06 11.45C13.16 11.59 13.25 11.73 13.35 11.87C13.46 12.01 13.56 12.15 13.67 12.29C13.78 12.43 13.88 12.57 14.07 12.79C14.26 13.01 14.44 13.22 14.59 13.41C14.74 13.6 14.89 13.81 15.03 14C15.17 14.19 15.32 14.38 15.46 14.57C15.6 14.76 15.74 14.96 15.89 15.15C16.03 15.34 16.17 15.53 16.31 15.72L17.18 15.77Z"
+            />
+          </svg>
+          Join WhatsApp Channel
+        </a>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const popupBanner = document.getElementById("whatsappPopupBanner");
+        const urlParams = new URLSearchParams(window.location.search);
+        const fromForm = urlParams.get("from_form"); // Checks for '?from_form=true'
+
+        // Check if the popup has been dismissed in this session
+        const popupDismissed = localStorage.getItem("whatsappPopupDismissed");
+
+        if (fromForm === "true" && !popupDismissed) {
+          popupBanner.style.display = "flex"; // Show the banner
+          // Optional: Scroll to the top of the page to ensure the banner is visible
+          window.scrollTo({ top: 0, behavior: "smooth" });
+
+          // Remove the parameter from the URL after showing the pop-up
+          // This prevents it from reappearing if the user just refreshes the page
+          const newUrl =
+            window.location.protocol +
+            "//" +
+            window.location.host +
+            window.location.pathname;
+          history.replaceState(null, "", newUrl);
+        }
+      });
+    </script>
+
+    <footer>
+      <div class="max">
+        <!-- JCIN UNIBEN Logo & Description -->
+
+        <div>
+          <h2 class="text-x">JCIN UNIBEN</h2>
+          <p class="leading-relaxed">
+            Junior Chamber International UNIBEN is a leadership organization for
+            students' committed to creating positive change within and beyond
+            the University of Benin.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+
+        <div>
+          <h3 class="font-semibold">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="/home" class="hover:underline">Home</a></li>
+            <li>
+              <a href="/register" class="hover:underline">Registration</a>
+            </li>
+            <li>
+              <a href="/about/mission" class="hover:underline">Our Mission</a>
+            </li>
+            <li><a href="/about/team" class="hover:underline">Our Team</a></li>
+            <li><a href="/contact" class="hover:underline">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect With Us -->
+        <div>
+          <h3 class="font-semibold">Connect With Us</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="https://www.facebook.com/Unibenjaycees"
+                target="_blank"
+                class="hover:underline"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href=" https://x.com/jci_uniben?t=PW5pwe7JdM_OeKftgZ5EzA&s=09"
+                target="_blank"
+                class="hover:underline"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                href=" https://x.com/jci_uniben?t=PW5pwe7JdM_OeKftgZ5EzA&s=09"
+                target="_blank"
+                class="hover:underline"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="mailto:jcinuniben@gmail.com" class="hover:underline"
+                >jcinuniben@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter or Motto -->
+        <div>
+          <h3 class="fon">Our Motto</h3>
+          <p class="italic">"Be Better"</p>
+          <p class="mt">Empowering young people to create positive change.</p>
+        </div>
+      </div>
+      <!-- Bottom Bar -->
+      <div class="border">© 2025 JCIN UNIBEN. All Rights Reserved.</div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
