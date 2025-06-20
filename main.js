@@ -1,68 +1,103 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menuToggle");
-  const navMenu = document.getElementById("navMenu");
-  const body = document.body;
+// function toggleMenu() {
+//   const navMenu = document.querySelector(".nav-menu");
+//   navMenu.classList.toggle("active");
+// }
 
-  // Function to toggle the main mobile menu
-  window.toggleMenu = function () {
-    navMenu.classList.toggle("active");
-    menuToggle.classList.toggle("active"); // Optional: Add 'active' to hamburger for animation/X-transform
-    body.classList.toggle("no-scroll"); // Prevent body scroll
-  };
+// // FIXED: Mobile dropdown toggle
+// function toggleDropdown(event) {
+//   // Only prevent default on mobile
+//   if (window.innerWidth <= 768) {
+//     event.preventDefault();
+//     const dropdown = event.target.closest(".dropdown");
+//     dropdown.classList.toggle("active");
+//   }
+//   // On desktop, let the link work normally
+// }
 
-  // --- Handling Mobile Dropdowns ---
-  // If you want dropdowns to open on click on mobile, not hover
-  const dropdowns = document.querySelectorAll(".nav-menu .dropdown > a");
+// // Close mobile menu when clicking outside
+// document.addEventListener("click", function (event) {
+//   const navMenu = document.querySelector(".nav-menu");
+//   const menuToggle = document.querySelector(".menu-toggle");
 
-  dropdowns.forEach((dropdownLink) => {
-    dropdownLink.addEventListener("click", function (event) {
-      // Only toggle on mobile (adjust breakpoint to match CSS)
-      if (window.innerWidth <= 768) {
-        event.preventDefault(); // Prevent default link navigation
-        const parentLi = this.closest("li.dropdown");
-        parentLi.classList.toggle("open"); // Toggle 'open' class on the parent <li>
+//   if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+//     navMenu.classList.remove("active");
+//     // Close all dropdowns
+//     document.querySelectorAll(".dropdown").forEach((dropdown) => {
+//       dropdown.classList.remove("active");
+//     });
+//   }
+// });
 
-        // Close other open dropdowns if multiple are possible
-        document
-          .querySelectorAll(".nav-menu .dropdown.open")
-          .forEach((otherDropdown) => {
-            if (otherDropdown !== parentLi) {
-              otherDropdown.classList.remove("open");
-            }
-          });
+// // Handle window resize
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth > 768) {
+//     document.querySelector(".nav-menu").classList.remove("active");
+//     document.querySelectorAll(".dropdown").forEach((dropdown) => {
+//       dropdown.classList.remove("active");
+//     });
+//   }
+// });
+
+// Toggle mobile menu
+function toggleMenu() {
+  const navMenu = document.querySelector(".nav-menu");
+  navMenu.classList.toggle("active");
+}
+
+// FIXED: Mobile dropdown toggle - works on touch/click
+function toggleDropdown(event) {
+  // Only prevent default on mobile
+  if (window.innerWidth <= 768) {
+    event.preventDefault();
+    event.stopPropagation();
+    const dropdown = event.target.closest(".dropdown");
+
+    // Close all other dropdowns first
+    document.querySelectorAll(".dropdown").forEach((otherDropdown) => {
+      if (otherDropdown !== dropdown) {
+        otherDropdown.classList.remove("active");
       }
     });
-  });
 
-  // Optional: Close mobile menu when a link inside it is clicked
-  // This is good for single-page applications or if you don't want the menu to stay open
-  navMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", function () {
-      if (window.innerWidth <= 768 && !this.closest(".dropdown-content")) {
-        // Only close if it's not a dropdown sub-link click
-        navMenu.classList.remove("active");
-        menuToggle.classList.remove("active");
-        body.classList.remove("no-scroll");
-        // Also close any open dropdowns if the main menu closes
-        document
-          .querySelectorAll(".nav-menu .dropdown.open")
-          .forEach((dropdown) => {
-            dropdown.classList.remove("open");
-          });
-      }
+    // Toggle current dropdown
+    dropdown.classList.toggle("active");
+  }
+  // On desktop, let the link work normally
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", function (event) {
+  const navMenu = document.querySelector(".nav-menu");
+  const menuToggle = document.querySelector(".menu-toggle");
+
+  if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+    navMenu.classList.remove("active");
+    // Close all dropdowns
+    document.querySelectorAll(".dropdown").forEach((dropdown) => {
+      dropdown.classList.remove("active");
     });
-  });
+  }
+});
 
-  // Optional: Close menu if user resizes window from mobile to desktop
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 768) {
-      navMenu.classList.remove("active");
-      menuToggle.classList.remove("active");
-      body.classList.remove("no-scroll");
-      // Ensure desktop dropdowns work again by removing 'open' class
-      document.querySelectorAll(".nav-menu .dropdown").forEach((dropdown) => {
-        dropdown.classList.remove("open");
+// Handle touch events for mobile dropdown
+document.addEventListener("touchstart", function (event) {
+  if (window.innerWidth <= 768) {
+    const dropdown = event.target.closest(".dropdown");
+    if (!dropdown) {
+      // Close all dropdowns if touching outside
+      document.querySelectorAll(".dropdown").forEach((dropdown) => {
+        dropdown.classList.remove("active");
       });
     }
-  });
+  }
+});
+
+// Handle window resize
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 768) {
+    document.querySelector(".nav-menu").classList.remove("active");
+    document.querySelectorAll(".dropdown").forEach((dropdown) => {
+      dropdown.classList.remove("active");
+    });
+  }
 });

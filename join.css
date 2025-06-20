@@ -1,8 +1,91 @@
-/* ===== JCI UNIBEN JOIN PAGE STYLES ===== */
-/* Built to complement the main stylesheet with consistent branding */
-
-/* ===== HERO OVERLAY SECTION ===== */
 section {
+  background: var(--hero-gradient);
+  color: var(--jci-white);
+  padding: 8rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1.5" fill="rgba(255,215,0,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.2)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  animation: float 20s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.overlay {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  animation: fadeInUp var(--animation-duration) ease-out;
+}
+
+.overlay h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--jci-white) 0%,
+    var(--jci-gold) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInFromLeft var(--animation-duration) ease-out;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.breadcrumb {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp var(--animation-duration) ease-out 0.3s both;
+}
+
+.breadcrumb a {
+  color: var(--jci-gold);
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.breadcrumb a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* background: var(--jci-white); */
+  /* transition: var(--transition-smooth); */
+}
+
+.breadcrumb a:hover {
+  color: var(--jci-white);
+  transform: translateX(-5px);
+}
+
+.breadcrumb a:hover::after {
+  width: 100%;
+}
+
+/* section {
   background: var(--hero-gradient);
   color: var(--jci-white);
   padding: 8rem 0 4rem;
@@ -55,6 +138,41 @@ section::before {
 }
 
 .breadcrumb {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp var(--animation-duration) ease-out 0.3s both;
+}
+
+.breadcrumb a {
+  color: var(--jci-gold);
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.breadcrumb a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--jci-white);
+  transition: var(--transition-smooth);
+}
+
+.breadcrumb a:hover {
+  color: var(--jci-white);
+  transform: translateX(-5px);
+}
+
+.breadcrumb a:hover::after {
+  width: 100%;
+} */
+
+/* .breadcrumb {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +186,7 @@ section::before {
   text-decoration: none;
   font-weight: 600;
   font-size: 1.125rem;
+  text-decoration: none;
   padding: 0.75rem 1.5rem;
   border: 2px solid var(--jci-gold);
   border-radius: 50px;
@@ -96,7 +215,7 @@ section::before {
 
 .breadcrumb a:hover::before {
   left: 0;
-}
+} */
 
 /* ===== FORM CONTAINER ===== */
 .form-container {
