@@ -4,7 +4,7 @@
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 6rem 2rem 4rem;
+  padding: 10rem 2rem 4rem; /* Increased top padding to avoid navbar interference */
   position: relative;
   overflow: hidden;
 }
@@ -193,6 +193,7 @@ textarea.input-field {
   transition: var(--transition-bounce);
   position: relative;
   overflow: hidden;
+  padding: 1rem 2.5rem;
   box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
   min-width: 180px;
 }
@@ -460,6 +461,10 @@ textarea.input-field {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
+  .container {
+    padding: 8rem 2rem 4rem; /* Adjusted for tablet */
+  }
+
   .grid-grid-co {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -476,7 +481,7 @@ textarea.input-field {
 
 @media (max-width: 768px) {
   .container {
-    padding: 4rem 1rem 3rem;
+    padding: 8rem 1rem 3rem;
   }
 
   .contact-form {
@@ -502,7 +507,8 @@ textarea.input-field {
 
 @media (max-width: 480px) {
   .container {
-    padding: 3rem 1rem 2rem;
+    /* padding: 5rem 1rem 2rem; */
+    padding: 7rem 2rem 3rem;
   }
 
   .contact-form {

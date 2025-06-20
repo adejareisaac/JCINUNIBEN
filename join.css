@@ -72,8 +72,8 @@ section::before {
   left: 0;
   width: 0;
   height: 2px;
-  /* background: var(--jci-white); */
-  /* transition: var(--transition-smooth); */
+  background: var(--jci-white);
+  transition: var(--transition-smooth);
 }
 
 .breadcrumb a:hover {
@@ -738,9 +738,9 @@ section::before {
 }
 
 /* ===== CUSTOM FOCUS INDICATORS ===== */
-.breadcrumb a:focus {
+/* .breadcrumb a:focus {
   box-shadow: 0 0 0 3px var(--jci-gold), 0 0 0 6px rgba(255, 215, 0, 0.3);
-}
+} */
 
 /* ===== SUCCESS/COMPLETION STATES ===== */
 .form-container.success {
