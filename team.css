@@ -1,6 +1,3 @@
-/* ===== TEAM PAGE SPECIFIC STYLES ===== */
-
-/* ===== HERO SECTION FOR TEAM PAGE ===== */
 section:first-of-type {
   background: var(--hero-gradient);
   color: var(--jci-white);
@@ -168,8 +165,6 @@ section:first-of-type::before {
     transform: translateY(0) scale(1);
   }
 }
-
-/* Gradient background effect on hover */
 .team-card::before {
   content: "";
   position: absolute;
@@ -468,7 +463,6 @@ section:first-of-type::before {
   }
 }
 
-/* ===== ADDITIONAL MICRO-INTERACTIONS ===== */
 @keyframes heartbeat {
   0%,
   100% {
@@ -483,7 +477,6 @@ section:first-of-type::before {
   animation: heartbeat 1.5s ease-in-out infinite;
 }
 
-/* ===== TEAM SECTION SPACING ===== */
 .max-w {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -492,7 +485,6 @@ section:first-of-type::before {
   padding-right: 2rem;
 }
 
-/* ===== ALTERNATIVE LAYOUT FOR LARGER SCREENS ===== */
 @media (min-width: 1200px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
@@ -507,7 +499,6 @@ section:first-of-type::before {
   }
 }
 
-/* ===== ENHANCED VISUAL HIERARCHY ===== */
 .team-card .text {
   position: relative;
   overflow: hidden;
@@ -533,7 +524,6 @@ section:first-of-type::before {
   left: 100%;
 }
 
-/* ===== FINAL POLISH ===== */
 .team-card {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 215, 0, 0.1);

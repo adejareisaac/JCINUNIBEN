@@ -611,7 +611,6 @@ main.container > section,
   animation: spin 1s linear infinite;
 }
 
-/* ===== DARK MODE SUPPORT (OPTIONAL) ===== */
 @media (prefers-color-scheme: dark) {
   main.container > section {
     background: rgba(0, 51, 102, 0.1);
