@@ -1,161 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags for SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JCIN UNIBEN | Join the Future</title>
-     <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="about.css">
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      JCIN UNIBEN | Junior Chamber International University of Benin -
+      Developing Leaders for a Changing World
+    </title>
+    <meta
+      name="title"
+      content="JCIN UNIBEN | Junior Chamber International University of Benin - Developing Leaders for a Changing World"
+    />
+    <meta
+      name="description"
+      content="Join JCIN UNIBEN, the first and largest collegiate chapter of JCI in Nigeria. Develop leadership skills, entrepreneurship, and create positive community impact. Ages 18-40 welcome."
+    />
+    <meta
+      name="keywords"
+      content="JCI UNIBEN, Junior Chamber International, University of Benin, leadership development, entrepreneurship, community service, student organization, young leaders, Nigeria"
+    />
+    <meta name="author" content="JCIN UNIBEN" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jcinuniben.org/" />
+    <meta
+      property="og:title"
+      content="JCIN UNIBEN | Developing Leaders for a Changing World"
+    />
+    <meta
+      property="og:description"
+      content="Join JCIN UNIBEN, the first and largest collegiate chapter of JCI in Nigeria. Develop leadership skills, entrepreneurship, and create positive community impact."
+    />
+    <meta
+      property="og:image"
+      content="https://jcinuniben.org/images/jcin-uniben-social.jpg"
+    />
+    <meta property="og:site_name" content="JCIN UNIBEN" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jcinuniben.org/" />
+    <meta
+      property="twitter:title"
+      content="JCIN UNIBEN | Developing Leaders for a Changing World"
+    />
+    <meta
+      property="twitter:description"
+      content="Join JCIN UNIBEN, the first and largest collegiate chapter of JCI in Nigeria. Develop leadership skills, entrepreneurship, and create positive community impact."
+    />
+    <meta
+      property="twitter:image"
+      content="https://jcinuniben.org/images/jcin-uniben-social.jpg"
+    />
+    <meta name="twitter:site" content="@jcinuniben" />
+    <meta name="twitter:creator" content="@jcinuniben" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jcinuniben.org/" />
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Junior Chamber International UNIBEN",
+        "alternateName": "JCIN UNIBEN",
+        "url": "https://jcinuniben.org",
+        "logo": "https://jcinuniben-reg.vercel.app/images/logo.png",
+        "description": "JCIN UNIBEN is the first and largest collegiate chapter of Junior Chamber International in Nigeria, developing young leaders aged 18-40.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Benin City",
+          "addressRegion": "Edo State",
+          "addressCountry": "Nigeria"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+234-xxx-xxx-xxxx",
+          "contactType": "customer service",
+          "email": "jcinuniben@gmail.com"
+        },
+        "sameAs": [
+          "https://instagram.com/jcinuniben",
+          "https://twitter.com/jcinuniben",
+          "https://linkedin.com/company/jcinuniben",
+          "https://facebook.com/jcinuniben"
+        ]
+      }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for Social Media Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
+
+    <!-- Google Analytics (Replace with your tracking ID) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_TRACKING_ID");
+    </script>
   </head>
   <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
       <div class="nav-container">
-    <div class="logo">
-        <img src="images/logo.PNG" alt="JCIN UNIBEN Logo" />
-      </div>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-       
-        <nav>
+        <div class="logo">
+          <img
+            src="images/logo.PNG"
+            alt="JCIN UNIBEN Logo - Junior Chamber International University of Benin"
+          />
+          <!-- <span class="logo-text">JCIN UNIBEN</span> -->
+        </div>
+
+        <button
+          class="menu-toggle"
+          onclick="toggleMenu()"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+
+        <nav role="navigation" aria-label="Main navigation">
           <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li class="dropdown">
-            <a href="about.html " onclick="toggleDropdown(event)">About ▼</a>
-              <div class="dropdown-content">
-                
-                <a href="team.html" >Our Team</a>
-                <a href="impact.html">Our Impact</a>
+              <button
+                class="dropdown-toggle"
+                onclick="toggleDropdown(event)"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                About <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-content" role="menu">
+                <a href="about.html" role="menuitem">About JCI</a>
+                <a href="team.html" role="menuitem">Our Team</a>
+                <a href="impact.html" role="menuitem">Our Impact</a>
+                <a href="history.html" role="menuitem">Our History</a>
               </div>
             </li>
-            <li>
-              <a href="join.html" >Registration</a>
+            <li class="dropdown">
+              <button
+                class="dropdown-toggle"
+                onclick="toggleDropdown(event)"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Programs <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-content" role="menu">
+                <a href="personal-development.html" role="menuitem"
+                  >Personal Development</a
+                >
+                <a href="business-entrepreneurship.html" role="menuitem"
+                  >Business & Entrepreneurship</a
+                >
+                <a href="community-action.html" role="menuitem"
+                  >Community Action</a
+                >
+                <a href="international-cooperation.html" role="menuitem"
+                  >International Cooperation</a
+                >
+              </div>
             </li>
-            <li><a href="contact.html" >Contact</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="join.html">Registration</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
-        <a href="join.html" class="cta-button" 
-          >JOIN NOW</a
-        >
+
+        <a href="join.html" class="cta-button" role="button">JOIN NOW</a>
       </div>
     </header>
-    <section>
-    <div class="overlay">
-      <h1>About Us</h1>
-      <div class="breadcrumb"><a href="index.html">Home</a></div>
-    </div>
-    </section>
     <!-- Hero Section for About Page -->
     <section class="hero-about">
-        <div class="container">
-            <h2>About Junior Chamber International UNIBEN</h2>
-            <p>Discover our global movement, our mission, and how we are empowering young leaders in the University of Benin community to create lasting positive change.</p>
-        </div>
+      <div class="container">
+        <h2>About Junior Chamber International UNIBEN</h2>
+        <p>
+          Discover our global movement, our mission, and how we are empowering
+          young leaders in the University of Benin community to create lasting
+          positive change.
+        </p>
+      </div>
     </section>
 
     <!-- Main Content Area -->
     <main class="container">
-        <!-- Section: Our Vision -->
-        <section>
-            <h3>Our Vision 🌍</h3>
-            <p>To be the foremost global network of young leaders.</p>
-        </section>
+      <!-- Section: Our Vision -->
+      <div class="mission-vision">
+        <div class="mission">
+          <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+          <p>
+            To provide leadership development opportunities that empower young
+            people to create positive change.
+          </p>
+        </div>
 
-        <!-- Section: Our Mission -->
-        <section>
-            <h3>Our Mission 🚀</h3>
-            <p>To provide leadership development opportunities that empower young people to create positive change.</p>
-        </section>
+        <div class="vision">
+          <h3><i class="fas fa-eye"></i> Our Vision</h3>
+          <p>To be the foremost global network of young leaders.</p>
+        </div>
+      </div>
+      <!-- Section: Our Creed -->
+      <section>
+        <h3><i class="fas fa-hands-helping"></i>Our Creed</h3>
+        <div class="creed-container">
+          <strong>We Believe:</strong>
+          <p>That faith in God gives meaning and purpose to human life;</p>
+          <p>
+            That the brotherhood of man transcends the sovereignty of nations;
+          </p>
+          <p>
+            That economic justice can best be won by free men through free
+            enterprise;
+          </p>
+          <p>That government should be of laws rather than of men;</p>
+          <p>That earth’s great treasure lies in human personality;</p>
+          <p>And that service to humanity is the best work of life.</p>
+        </div>
+      </section>
 
-        <!-- Section: Our Creed -->
-        <section>
-            <h3>Our Creed 🙏</h3>
-            <div class="creed-container">
-                <strong>We Believe:</strong>
-                <p>That faith in God gives meaning and purpose to human life;</p>
-                <p>That the brotherhood of man transcends the sovereignty of nations;</p>
-                <p>That economic justice can best be won by free men through free enterprise;</p>
-                <p>That government should be of laws rather than of men;</p>
-                <p>That earth’s great treasure lies in human personality;</p>
-                <p>And that service to humanity is the best work of life.</p>
-            </div>
-        </section>
+      <!-- Section: Who We Are -->
+      <section>
+        <h3><i class="fas fa-hands-together"></i>Who We Are</h3>
+        <div class="who-we-are-grid">
+          <!-- JCI Section -->
+          <div class="who-we-are-item">
+            <h4>JCI (Junior Chamber International)</h4>
+            <p>
+              JCI is a global membership-based organization that takes its
+              members through a development journey to equip them with full
+              potential as leaders for a changing world. JCI is a global network
+              of enterprising young leaders, ages 18 to 40. Active in more than
+              5000 locations across nearly 115 countries. We transform
+              passionate young people into capable and enterprising young
+              leaders through training, programs, projects and events aligned
+              with 4 areas of development opportunity.
+            </p>
+          </div>
 
-        <!-- Section: Who We Are -->
-        <section>
-            <h3>Who We Are  👥</h3>
-            <div class="who-we-are-grid">
-                <!-- JCI Section -->
-                <div class="who-we-are-item">
-                    <h4>JCI (Junior Chamber International) 🌐</h4>
-                    <p>JCI is a global membership-based organization that takes its members through a development journey to equip them with full potential as leaders for a changing world. JCI is a global network of enterprising young leaders, ages 18 to 40. Active in more than 5000 locations across nearly 115 countries. We transform passionate young people into capable and enterprising young leaders through training, programs, projects and events aligned with 4 areas of development opportunity.</p>
-                </div>
+          <!-- JCI Nigeria Section -->
+          <div class="who-we-are-item">
+            <h4>JCI Nigeria</h4>
+            <p>
+              JCI Nigeria is the largest youth-based organization in Nigeria
+              with 5000+ active members and alumni network. We equip young
+              people with the tools and resources needed to become well-rounded
+              leaders who can effectively navigate a globalized world and create
+              sustainable changes. Our four areas of opportunity are; Individual
+              development, Business and entrepreneurship, Community action, and
+              International cooperation. Do you want to be a global
+              communicator, entrepreneur, changemaker, or networker? Join us on
+              the journey of developing young leaders for a changing world!
+            </p>
+          </div>
 
-                <!-- JCI Nigeria Section -->
-                <div class="who-we-are-item">
-                    <h4>JCI Nigeria</h4>
-                    <p>JCI Nigeria is the largest youth-based organization in Nigeria with 5000+ active members and alumni network. We equip young people with the tools and resources needed to become well-rounded leaders who can effectively navigate a globalized world and create sustainable changes. Our four areas of opportunity are; Individual development, Business and entrepreneurship, Community action, and International cooperation. Do you want to be a global communicator, entrepreneur, changemaker, or networker? Join us on the journey of developing young leaders for a changing world!</p>
-                </div>
-
-                <!-- JCI UNIBEN Section (New Content) -->
-                <div class="who-we-are-item">
-                    <h4>JCI UNIBEN</h4>
-                    <p>
-                        As a vibrant and dynamic local chapter, JCI UNIBEN serves as the premier platform for students of the University of Benin (UNIBEN) to ignite their leadership potential and drive positive change within their campus and wider community. We provide a unique blend of practical leadership training, entrepreneurial initiatives, and impactful community projects tailored to the specific needs and aspirations of UNIBEN students. Our members are empowered to develop vital skills in communication, project management, and global citizenship, preparing them to excel in their careers and contribute meaningfully to society. JCI UNIBEN is more than an organization; it's a launchpad for future leaders and an inclusive family where every student's voice and vision can thrive. Join us to transform challenges into opportunities and make your mark on the world, starting right here in UNIBEN!
-                    </p>
-                </div>
-            </div>
-        </section>
+          <!-- JCI UNIBEN Section (New Content) -->
+          <div class="who-we-are-item">
+            <h4>JCI UNIBEN</h4>
+            <p>
+              As a vibrant and dynamic local chapter, JCI UNIBEN serves as the
+              premier platform for students of the University of Benin (UNIBEN)
+              to ignite their leadership potential and drive positive change
+              within their campus and wider community. We provide a unique blend
+              of practical leadership training, entrepreneurial initiatives, and
+              impactful community projects tailored to the specific needs and
+              aspirations of UNIBEN students. Our members are empowered to
+              develop vital skills in communication, project management, and
+              global citizenship, preparing them to excel in their careers and
+              contribute meaningfully to society. JCI UNIBEN is more than an
+              organization; it's a launchpad for future leaders and an inclusive
+              family where every student's voice and vision can thrive. Join us
+              to transform challenges into opportunities and make your mark on
+              the world, starting right here in UNIBEN!
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
-  <footer>
-  <div class="max">
-    
-    <!-- JCIN UNIBEN Logo & Description -->
-    <div>
-      <h2 class="text-x">JCIN UNIBEN</h2>
-      <p class="leading-relaxed">
-        Junior Chamber International UNIBEN is a leadership organization for students' committed to creating positive change within and beyond the University of Benin.
-      </p>
-    </div>
+    <footer class="footer" role="contentinfo">
+      <div class="footer-content">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Organization Info -->
+            <div class="footer-section">
+              <div class="footer-logo">
+                <img src="images/logo.PNG" alt="JCIN UNIBEN Logo" />
+                <!-- <h3>JCIN UNIBEN</h3> -->
+              </div>
+              <p>
+                Junior Chamber International UNIBEN is a leadership organization
+                for students committed to creating positive change within and
+                beyond the University of Benin.
+              </p>
+              <div class="social-links">
+                <a
+                  href="https://instagram.com/jcinuniben"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://twitter.com/jcinuniben"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Twitter"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/company/jcinuniben"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Connect with us on LinkedIn"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://facebook.com/jcinuniben"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Like us on Facebook"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a
+                  href="https://youtube.com/jcinuniben"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Subscribe to our YouTube channel"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
 
-    <!-- Quick Links -->
-    <div>
-      <h3 class="font-semibold ">Quick Links</h3>
-      <ul class="space-y-2">
-         <li><a href="index.html" class="hover:underline">Home</a></li>
-        <li><a href="about.html" class="hover:underline">About</a></li>
-        <li><a href="join.html" class="hover:underline">Registration</a></li>
-        <li><a href="contact.html" class="hover:underline">Contact</a></li>
-        <!-- <li><a href="/contact" class="hover:underline">Contact Us</a></li> -->
-      </ul>
-    </div>
+            <!-- Quick Links -->
+            <div class="footer-section">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About JCI</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="join.html">Registration</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
 
-    <!-- Connect With Us -->
-    <div>
-      <h3 class="font-semibold">Connect With Us</h3>
-      <ul class="space-y-2">
-        <li><a href="https://instagram.com/jcinuniben" target="_blank" class="hover:underline">Instagram</a></li>
-        <li><a href="https://twitter.com/jcinuniben" target="_blank" class="hover:underline">Twitter</a></li>
-        <li><a href="https://linkedin.com/company/jcinuniben" target="_blank" class="hover:underline">LinkedIn</a></li>
-        <li><a href="mailto:jcinuniben@gmail.com" class="hover:underline">jcinuniben@gmail.com</a></li>
-      </ul>
-    </div>
+            <!-- Programs -->
+            <div class="footer-section">
+              <h4>Our Programs</h4>
+              <ul>
+                <li>
+                  <a href="pd.html">Personal Development</a>
+                </li>
+                <li>
+                  <a href="be.html">Business & Entrepreneurship</a>
+                </li>
+                <li><a href="ca.html">Community Action</a></li>
+                <li>
+                  <a href="ic.html">International Cooperation</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="footer-section">
+              <h4>Get In Touch</h4>
+              <div class="contact-info">
+                <p>
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:jcinuniben@gmail.com">jcinuniben@gmail.com</a>
+                </p>
+                <p>
+                  <i class="fas fa-phone"></i>
+                  <a href="tel:+2348123456789">+234 812 345 6789</a>
+                </p>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> UNIBEN, Benin City, Edo
+                  State
+                </p>
+              </div>
 
-    <!-- Newsletter or Motto -->
-    <div>
-      <h3 class="fon">Our Motto</h3>
-      <p class="italic">"TO BE"</p>
-      <p class="mt">the foremost global network of young leaders.</p>
-    </div>
-  </div>
-  <!-- Bottom Bar -->
-  <div class="border">
-    © 2025 JCIN UNIBEN. All Rights Reserved.
-  </div>
-</footer>
+              <!-- Newsletter Signup -->
+              <div class="newsletter">
+                <h5>Stay Updated</h5>
+                <form
+                  class="newsletter-form"
+                  onsubmit="subscribeNewsletter(event)"
+                >
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                    aria-label="Email address for newsletter"
+                  />
+                  <button type="submit" aria-label="Subscribe to newsletter">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-content">
+            <p>&copy; 2025 JCIN UNIBEN. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="back-to-top"
+      onclick="scrollToTop()"
+      aria-label="Back to top"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
     <script src="main.js"></script>
-</body>
- <!-- <script src="main.js"></script> -->
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+      <div class="spinner"></div>
+    </div>
+  </body>
 </html>
-                      
