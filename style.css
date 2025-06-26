@@ -723,6 +723,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 .testimonial-content blockquote {
@@ -1306,19 +1307,20 @@ body {
     align-items: center;
   }
   .logo img {
-    height: 70px;
+    height: 100px;
+    margin-left: 30px;
   }
 
   .cta-button {
     display: none; /* Hide CTA button on mobile for cleaner nav */
     justify-content: center;
   }
-
   .menu-toggle {
     display: flex;
-    z-index: 1001; /* Ensure hamburger is above nav-menu when open */
+    margin-left: auto; /* Pushes the hamburger to the right */
+    margin-right: 40px;
+    z-index: 1001;
   }
-
   .nav-menu {
     flex-direction: column;
     position: absolute;
