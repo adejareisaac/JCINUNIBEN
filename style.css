@@ -207,7 +207,7 @@ body {
 /* #ffd700 */
 /* CTA Button */
 .cta-button {
-  background: linear-gradient(135deg, #ffc20e, #b69d4c);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   color: #fff;
   padding: 12px 24px;
   border-radius: 25px;
@@ -429,7 +429,7 @@ body {
   left: 0;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #b69d4c, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
   border-radius: 2px;
 }
 
@@ -569,7 +569,7 @@ body {
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #b69d4c, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
   border-radius: 2px;
 }
 
@@ -646,7 +646,7 @@ body {
 .offer-content h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 1rem;
 }
 
@@ -946,7 +946,7 @@ body {
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #b69d4c, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
 }
 
 .footer-logo {
@@ -1054,7 +1054,7 @@ body {
 }
 
 .contact-info a:hover {
-  color: #ff6b35;
+  color: #b69d4c;
 }
 
 /* Newsletter */
@@ -1089,7 +1089,7 @@ body {
 /* Continue from where you stopped */
 .newsletter-form button {
   padding: 12px 15px;
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -1129,7 +1129,7 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   color: #fff;
   width: 50px;
   height: 50px;
@@ -1183,7 +1183,7 @@ body {
 
 .spinner {
   border: 8px solid #f3f3f3;
-  border-top: 8px solid #1e3c72; /* Primary blue color */
+  border-top: 8px solid #003da5; /* Primary blue color */
   border-radius: 50%;
   width: 60px;
   height: 60px;
