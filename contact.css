@@ -1,9 +1,5 @@
-@import url(style.css);
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-  margin-top: 100px; /* Account for fixed header */
 }
 
 /* Contact Header */
@@ -11,13 +7,14 @@
   text-align: center;
   margin-bottom: 4rem;
   padding: 2rem 0;
+  margin-top: 120px;
 }
 
 .text-5x {
   font-family: "Manrope", sans-serif;
   font-size: 3.5rem;
   font-weight: 800;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
@@ -31,7 +28,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
   border-radius: 2px;
 }
 
@@ -69,7 +66,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
 }
 
 .contact-form:hover {
@@ -81,7 +78,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 2rem;
   position: relative;
 }
@@ -93,7 +90,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
   border-radius: 2px;
 }
 
@@ -143,7 +140,7 @@
 }
 
 .input-field:focus {
-  border-color: #ff6b35;
+  border-color: #b69d4c;
   box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
   transform: translateY(-2px);
 }
@@ -159,7 +156,7 @@
 
 /* Submit Button */
 .submit-button {
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -190,7 +187,7 @@
 .submit-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
-  background: linear-gradient(135deg, #e55a2b, #e6c200);
+  background: linear-gradient(135deg, #e6c200, #b69d4c);
 }
 
 .submit-button:active {
@@ -221,7 +218,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  background: linear-gradient(90deg, #003da5 #2a5298);
 }
 
 .bg-white:hover {
@@ -233,7 +230,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 1.5rem;
   position: relative;
 }
@@ -245,7 +242,7 @@
   left: 0;
   width: 50px;
   height: 2px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
   border-radius: 1px;
 }
 
@@ -277,7 +274,7 @@
 .w-6 {
   width: 1.5rem;
   height: 1.5rem;
-  color: #ff6b35;
+  color: #003da5;
   flex-shrink: 0;
 }
 

@@ -40,9 +40,9 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-
+/* #2a5298 100% */
 .header {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #003da5 100%);
   box-shadow: 0 4px 20px rgba(30, 60, 114, 0.3);
   position: fixed;
   top: 0;
@@ -116,7 +116,7 @@ body {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #ffd700, #ff6b35);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -168,6 +168,8 @@ body {
   left: 0;
   background: #fff;
   min-width: 250px;
+  /* font-size: 1.5rem; */
+  /* font-weight: 500; */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   opacity: 0;
@@ -188,6 +190,7 @@ body {
   color: #333;
   padding: 12px 20px;
   text-decoration: none;
+
   transition: all 0.3s ease;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -197,14 +200,14 @@ body {
 }
 
 .dropdown-content a:hover {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #003da5, #2a5298);
   color: #fff;
   transform: translateX(5px);
 }
-
+/* #ffd700 */
 /* CTA Button */
 .cta-button {
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #ffc20e, #b69d4c);
   color: #fff;
   padding: 12px 24px;
   border-radius: 25px;
@@ -313,7 +316,7 @@ body {
 
 .slide-cta {
   display: inline-block;
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   color: #fff;
   padding: 15px 40px;
   border-radius: 30px;
@@ -414,7 +417,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 2rem;
   position: relative;
 }
@@ -426,7 +429,7 @@ body {
   left: 0;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #b69d4c, #ffd700);
   border-radius: 2px;
 }
 
@@ -467,7 +470,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-weight: 700;
@@ -475,7 +478,7 @@ body {
 
 .mission i,
 .vision i {
-  color: #ff6b35;
+  color: #b69d4c;
   font-size: 1.5rem;
 }
 
@@ -487,7 +490,7 @@ body {
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #003da5, #2a5298);
   color: #fff;
   padding: 2rem;
   border-radius: 15px;
@@ -528,7 +531,7 @@ body {
   font-weight: 900;
   font-family: "Manrope", sans-serif;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #ffd700, #ff6b35);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -553,7 +556,7 @@ body {
   font-size: 2.5rem;
   font-weight: 800;
   text-align: center;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 4rem;
   position: relative;
 }
@@ -566,7 +569,7 @@ body {
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #b69d4c, #ffd700);
   border-radius: 2px;
 }
 
@@ -654,7 +657,7 @@ body {
 }
 
 .offer-link {
-  color: #ff6b35;
+  color: #ffc20e;
   text-decoration: none;
   font-weight: 600;
   display: flex;
@@ -664,7 +667,7 @@ body {
 }
 
 .offer-link:hover {
-  color: #1e3c72;
+  color: #003da5;
   transform: translateX(5px);
 }
 
@@ -697,7 +700,7 @@ body {
   top: -10px;
   left: 20px;
   font-size: 4rem;
-  color: #ff6b35;
+  color: #1a52ba;
   font-family: serif;
   opacity: 0.3;
 }
@@ -713,7 +716,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 1.5rem;
-  border: 4px solid #ff6b35;
+  border: 4px solid #1a52ba;
 }
 
 .testimonial-image img {
@@ -732,7 +735,7 @@ body {
 
 .testimonial-content cite {
   font-style: normal;
-  color: #1e3c72;
+  color: #1a52ba;
   font-weight: 600;
 }
 
@@ -747,7 +750,7 @@ body {
    ======================================== */
 .cta-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #003da5, 100%, #2a5298 0%);
   color: #fff;
   text-align: center;
   position: relative;
@@ -809,7 +812,7 @@ body {
 }
 
 .cta-primary {
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   color: #fff;
   box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
 }
@@ -879,7 +882,7 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #b69d4c, #ffd700);
   color: #fff;
   padding: 8px 15px;
   border-radius: 20px;
@@ -943,7 +946,7 @@ body {
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #b69d4c, #ffd700);
 }
 
 .footer-logo {
@@ -993,12 +996,12 @@ body {
   left: 0;
   width: 0;
   height: 1px;
-  background: #ff6b35;
+  background: #b69d4c;
   transition: width 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #ff6b35;
+  color: #b69d4c;
   transform: translateX(5px);
 }
 
@@ -1018,8 +1021,8 @@ body {
   justify-content: center;
   width: 45px;
   height: 45px;
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
-  color: #fff;
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
+  color: #ffe;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -1027,7 +1030,7 @@ body {
 
 .social-links a:hover {
   transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
 }
 
 /* Contact Info */
@@ -1040,7 +1043,7 @@ body {
 }
 
 .contact-info i {
-  color: #ff6b35;
+  color: #b69d4c;
   width: 20px;
 }
 
@@ -1298,10 +1301,16 @@ body {
 @media (max-width: 768px) {
   .nav-container {
     padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo img {
+    height: 70px;
   }
 
   .cta-button {
-    display: flex; /* Hide CTA button on mobile for cleaner nav */
+    display: none; /* Hide CTA button on mobile for cleaner nav */
     justify-content: center;
   }
 

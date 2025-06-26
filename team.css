@@ -40,7 +40,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 3rem; /* Base font size */
   font-weight: 800;
-  color: #1e3c72;
+  color: #003da5;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   position: relative;
@@ -55,7 +55,7 @@
   transform: translateX(-50%);
   width: 100px; /* Base width for the underline */
   height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
   border-radius: 2px;
 }
 
@@ -125,7 +125,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   transform: scaleX(0);
   transition: transform 0.4s ease;
   border-radius: 25px 25px 0 0;
@@ -152,7 +152,7 @@
 
 .team-card:hover .team-member-img {
   transform: scale(1.1);
-  border-color: #ff6b35;
+  border-color: #b69d4c;
   box-shadow: 0 15px 40px rgba(255, 107, 53, 0.3);
 }
 
@@ -161,7 +161,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 1.4rem; /* Base font size */
   font-weight: 700;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 2;
@@ -169,7 +169,7 @@
 }
 
 .team-card:hover .text {
-  color: #ff6b35;
+  color: #b69d4c;
 }
 
 /* Team Member Position */
@@ -184,7 +184,7 @@
 }
 
 .team-card:hover .text-m {
-  color: #1e3c72;
+  color: #003da5;
   font-weight: 600;
 }
 

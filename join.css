@@ -19,7 +19,7 @@ body {
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
 }
 
 .form-container::after {
@@ -49,7 +49,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -62,7 +62,7 @@ body {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
   border-radius: 2px;
 }
 
@@ -80,7 +80,7 @@ body {
   padding: 2.5rem;
   margin-bottom: 2.5rem;
   position: relative;
-  border-left: 5px solid #ff6b35;
+  border-left: 5px solid #b69d4c;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -100,7 +100,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e3c72;
+  color: #003da5;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -115,14 +115,14 @@ body {
 }
 
 .payment-info p strong {
-  color: #1e3c72;
+  color: #003da5;
   font-weight: 600;
   display: inline-block;
   min-width: 140px;
 }
 
 .payment-info span[style*="color: #007bff"] {
-  color: #1e3c72 !important;
+  color: #003da5 !important;
   background: rgba(30, 60, 114, 0.1);
   padding: 2px 8px;
   border-radius: 5px;
@@ -161,7 +161,7 @@ body {
   max-width: 400px;
   margin: 2rem auto;
   padding: 18px 30px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #003da5, #2a5298);
   color: #fff;
   text-decoration: none;
   font-family: "Manrope", sans-serif;
@@ -198,7 +198,7 @@ body {
 .register-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(30, 60, 114, 0.4);
-  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  background: linear-gradient(135deg, #003da5, #1e3c72);
 }
 
 .register-button:active {

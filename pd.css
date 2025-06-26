@@ -63,7 +63,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #b69d4c);
   border-radius: 2px;
   animation: slideInLeft 1s ease-out 0.5s both;
 }
@@ -192,7 +192,7 @@
 .nav-btn {
   background: rgba(255, 255, 255, 0.9);
   border: none;
-  color: #1e3c72;
+  color: #003da5;
   font-size: 1.5rem;
   padding: 15px 20px;
   border-radius: 50%;
@@ -211,7 +211,7 @@
   left: 50%;
   width: 0;
   height: 0;
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   border-radius: 50%;
   transition: all 0.3s ease;
   transform: translate(-50%, -50%);
@@ -264,7 +264,7 @@
   left: 50%;
   width: 0;
   height: 0;
-  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
   border-radius: 50%;
   transition: all 0.3s ease;
   transform: translate(-50%, -50%);
