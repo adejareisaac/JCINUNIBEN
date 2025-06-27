@@ -501,6 +501,7 @@ body {
    WHO WE ARE SECTION
    ======================================== */
 .who-we-are {
+  margin-top: 80px;
   padding: 100px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   position: relative;
@@ -529,6 +530,7 @@ body {
   font-size: 2.5rem;
   font-weight: 800;
   color: #003da5;
+  margin-top: 1.2rem;
   margin-bottom: 2rem;
   position: relative;
 }
