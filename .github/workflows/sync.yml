@@ -1,0 +1,28 @@
+name: Auto Sync Fork
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at midnight UTC
+  workflow_dispatch: # Optional: run manually
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+
+      - name: Pull upstream changes
+        run: |
+          git remote add upstream https://github.com/OriginalUser/OriginalRepo.git
+          git fetch upstream
+          git checkout main
+          git merge upstream/main
+          git push origin main
