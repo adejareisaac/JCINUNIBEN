@@ -21,7 +21,7 @@ jobs:
 
       - name: Pull upstream changes
         run: |
-          git remote add upstream https://github.com/OriginalUser/OriginalRepo.git
+          git remote add upstream https://github.com/samuelikhifa/JCINUNIBEN-REG.git
           git fetch upstream
           git checkout main
           git merge upstream/main
