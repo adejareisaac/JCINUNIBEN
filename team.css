@@ -1,277 +1,186 @@
-.max-w {
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 70px;
-  padding: 100px 20px; /* Base padding for larger screens */
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  position: relative;
-  overflow: hidden;
+
+/* Force hide loading spinner on team page */
+#loading-spinner, #loading-spinner *, .loading-spinner, .spinner {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
 }
 
-.max-w::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle,
-    rgba(30, 60, 114, 0.05) 0%,
-    transparent 70%
-  );
-  animation: rotate 30s linear infinite;
-  z-index: 0;
-}
-
-.max-w > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* Header Section */
-.text-center {
-  text-align: center;
-  margin-bottom: 4rem; /* Base margin */
-  padding: 0 20px; /* Base padding */
-}
-
-.leading-tight {
-  font-family: "Manrope", sans-serif;
-  font-size: 3rem; /* Base font size */
-  font-weight: 800;
-  color: #003da5;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  position: relative;
-  display: inline-block;
-}
-
-.leading-tight::after {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px; /* Base width for the underline */
-  height: 4px;
-  background: linear-gradient(90deg, #ffd700, #b69d4c);
-  border-radius: 2px;
-}
-
-.texts {
-  font-size: 1.3rem; /* Base font size */
-  line-height: 1.6;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto;
-  opacity: 0.9;
-}
-
-/* Team Grid */
-.grid {
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem; /* Base gap */
-  margin-top: 3rem;
-}
-
-/* Team Card */
-.team-card {
-  background: #fff;
-  border-radius: 25px;
-  padding: 2.5rem; /* Base padding */
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(30, 60, 114, 0.1);
-}
-
-/* Hover Effects */
-.team-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
+/* HERO SECTION */
+.hero-about {
   background: linear-gradient(
-    135deg,
-    rgba(30, 60, 114, 0.05),
-    rgba(255, 107, 53, 0.05)
-  );
-  transition: all 0.6s ease;
-  z-index: 1;
+      135deg,
+      /* Reduced opacity for more image visibility */ rgba(30, 60, 114, 0.6),
+      /* Was 0.9 */ rgba(42, 82, 152, 0.6) /* Was 0.9 */
+    ),
+    url("images1/2025 Legacy Administration Boards and Executives Headshot/BoardMembers.jpg") center/cover;
+  padding: 120px 0 100px;
+  margin-top: 40px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  object-position: top;
+  overflow: hidden;
 }
 
-.team-card:hover::before {
-  left: 0;
-}
-
-.team-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 25px 60px rgba(30, 60, 114, 0.15);
-  border-color: rgba(30, 60, 114, 0.2);
-}
-
-/* Gradient Border Animation */
-.team-card::after {
+.hero-about::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(135deg, #ffd700, #b69d4c);
-  transform: scaleX(0);
-  transition: transform 0.4s ease;
-  border-radius: 25px 25px 0 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    /* Reduced opacity for more image visibility */ rgba(30, 60, 114, 0.5),
+    /* Was 0.8 */ rgba(42, 82, 152, 0.5) /* Was 0.8 */
+  );
+  z-index: 1;
 }
 
-.team-card:hover::after {
-  transform: scaleX(1);
-}
-
-/* Team Member Image */
-.team-member-img {
-  width: 120px; /* Base size */
-  height: 120px; /* Base size */
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 1.5rem;
-  display: block;
-  border: 4px solid #fff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  transition: all 0.4s ease;
+.hero-about .container {
   position: relative;
   z-index: 2;
+  max-width: 800px;
 }
 
-.team-card:hover .team-member-img {
-  transform: scale(1.1);
-  border-color: #b69d4c;
-  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.3);
-}
-
-/* Team Member Name */
-.text {
+.hero-about h2 {
   font-family: "Manrope", sans-serif;
-  font-size: 1.4rem; /* Base font size */
-  font-weight: 700;
-  color: #003da5;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-about p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 1s ease-out 0.3s both;
+  margin-bottom: 0;
+}
+
+
+/* TEAM PAGE STYLES */
+
+.team-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #1e3c72;
   margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 2;
-  transition: all 0.3s ease;
 }
 
-.team-card:hover .text {
+.team-description {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(30, 60, 114, 0.08);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  max-width: 320px;
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(30, 60, 114, 0.15);
+}
+
+.team-photo {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  border: 4px solid #ffd700;
+  box-shadow: 0 2px 8px rgba(30, 60, 114, 0.08);
+}
+
+.team-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 0.3rem;
+  font-family: "Manrope", sans-serif;
+}
+
+.team-role {
+  font-size: 1.05rem;
   color: #b69d4c;
-}
-
-/* Team Member Position */
-.text-m {
-  font-size: 1rem; /* Base font size */
-  font-weight: 500;
-  color: #666;
-  margin: 0;
-  position: relative;
-  z-index: 2;
-  transition: all 0.3s ease;
-}
-
-.team-card:hover .text-m {
-  color: #003da5;
   font-weight: 600;
+  margin-bottom: 0.7rem;
 }
 
-/* Animation for rotation */
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.team-bio {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.1rem;
 }
 
-/* Stagger Animation for Cards */
-/* Keeping existing staggered animation */
-.team-card:nth-child(1) {
-  animation: fadeInUp 0.6s ease-out 0.1s both;
+.team-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
 }
-.team-card:nth-child(2) {
-  animation: fadeInUp 0.6s ease-out 0.2s both;
-}
-.team-card:nth-child(3) {
-  animation: fadeInUp 0.6s ease-out 0.3s both;
-}
-.team-card:nth-child(4) {
-  animation: fadeInUp 0.6s ease-out 0.4s both;
-}
-.team-card:nth-child(5) {
-  animation: fadeInUp 0.6s ease-out 0.5s both;
-}
-/* Add more if you expect more cards to be visible initially */
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+.team-socials a {
+  color: #1e3c72;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+
+.team-socials a:hover {
+  color: #ffd700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .team-section {
+    padding: 50px 10px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .team-title {
+    font-size: 2.1rem;
+  }
+  .team-card {
+    padding: 2rem 1rem 1.5rem 1rem;
+    max-width: 95vw;
   }
 }
 
-/* Pulse Effect for Images */
-@keyframes pulse {
-  0%,
-  100% {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  50% {
-    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
-  }
-}
-
-.team-member-img:hover {
-  animation: pulse 2s infinite;
-}
-
-@media screen and (min-width: 1600px) {
-  .max-w {
-    max-width: 1400px;
-    padding: 120px 40px; /* More padding on very large screens */
-  }
-
-  .grid {
-    grid-template-columns: repeat(4, 1fr); /* Four columns for ultra-wide */
-    gap: 3.5rem; /* Slightly more gap */
-  }
-
-  .leading-tight {
-    font-size: 4rem; /* Even larger heading */
-  }
-
-  .texts {
-    font-size: 1.5rem;
-  }
-
-  .team-member-img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .text {
-    font-size: 1.6rem;
-  }
-
-  .text-m {
-    font-size: 1.2rem;
+  .team-section {
+    padding: 30px 5px;
   }
 }

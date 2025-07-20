@@ -1,3 +1,7 @@
+/* Hide loading spinner when .hidden is applied */
+#loading-spinner.hidden {
+  display: none !important;
+}
 * {
   margin: 0;
   padding: 0;
@@ -497,8 +501,103 @@ body {
 }
 */
 
+/* President's Message Section Start */
+.presidentsmessage {
+  background: #e5e5e5;
+  padding: 40px 0 20px 0; /* Reduce bottom padding for less space below */
+}
+
+.presidentsmessage h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #b7a520;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.president-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px; /* Increase left/right padding for better centering */
+  box-sizing: border-box;
+}
+.president-text, .president-image {
+  min-width: 280px;
+  font-size: 1.25rem;
+  color: #111;
+}
+.fromthelop {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #0091da;
+  font-family: "Manrope", sans-serif;
+}
+.legacy-highlight {
+  color: #b7a520;
+  font-weight: bold;
+}
+.bricks-highlight {
+  color: #b7a520;
+  font-weight: bold;
+}
+.president-image {
+  flex: 0 1 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.president-image img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  background: #fff;
+}
+.president-info {
+  background: #b7a520;
+  color: #111;
+  width: 100%;
+  padding: 18px 0 12px 0;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: -4px;
+}
+.president-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.president-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+  .president-container {
+    flex-direction: column;
+    gap: 24px;
+    /* width: 100%; */
+    padding: 0px 10px 0px 5px;
+
+  }
+  .president-image img {
+    width: 100%;
+    height: 260px;
+    max-width: 340px;
+  }
+}
+/* PRESIDENT'S MESSAGE START */
+
 /* ========================================
-   WHO WE ARE SECTION
+   WHO WE ARE SECTION START
    ======================================== */
 .who-we-are {
   margin-top: 80px;
@@ -519,7 +618,7 @@ body {
 
 .who-we-are-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr ;
   gap: 4rem;
   display: grid;
   align-items: center;
@@ -540,7 +639,7 @@ body {
   position: absolute;
   bottom: -10px;
   left: 0;
-  width: 80px;
+  width: 100px;
   height: 4px;
   background: linear-gradient(90deg, #ffd700, #b69d4c);
   border-radius: 2px;
@@ -556,14 +655,29 @@ body {
   color: #555;
 }
 
-.mission-vision {
+.creed-mission-vision {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+  grid-template-areas: 
+    "creed creed"
+    "mission vision";
 }
 
-.mission,
+.creed {
+  grid-area: creed;
+}
+
+.mission {
+  grid-area: mission;
+}
+
+.vision {
+  grid-area: vision;
+}
+
+.creed, .mission,
 .vision {
   background: #fff;
   padding: 2rem;
@@ -572,16 +686,17 @@ body {
   transition: all 0.3s ease;
 }
 
-.mission:hover,
+.creed:hover, .mission:hover,
 .vision:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.mission h3,
+.creed h3, .mission h3,
 .vision h3 {
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 0.5rem;
   color: #003da5;
   margin-bottom: 1rem;
@@ -589,11 +704,22 @@ body {
   font-weight: 700;
 }
 
-.mission i,
+.creed i, .mission i,
 .vision i {
   color: #b69d4c;
   font-size: 1.5rem;
 }
+/* creed-mission-vision Media Queries */
+@media (max-width: 768px) {
+  .creed-mission-vision {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "creed"
+      "mission"
+      "vision";
+  }
+}
+/* WHO WE ARE SECTION END */
 
 /* Stats Section */
 .who-we-are-stats {
@@ -1032,6 +1158,52 @@ body {
   color: #1e3c72;
 }
 
+/* ========================================
+   UPCOMING EVENTS SECTION
+   ======================================== */
+.upcoming-events {
+  padding: 80px 0 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.upcoming-events .section-title {
+  text-align: center;
+  color: #003da5;
+  margin-bottom: 2rem;
+}
+
+.events-info {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.calendar-embed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 400px;
+  box-shadow: 0 8px 32px rgba(30, 60, 114, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  padding: 16px;
+}
+
+.calendar-embed iframe {
+  width: 100%;
+  min-height: 500px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+}
+
+
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
 .footer {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   color: #fff;
@@ -1741,3 +1913,4 @@ body {
     font-size: clamp(0.9rem, 4vw, 1.2rem);
   }
 }
+

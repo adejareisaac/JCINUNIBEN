@@ -1,0 +1,579 @@
+/* ========================================
+   ABOUT PAGE STYLES - Background Image Visibility Update
+   ======================================== */
+
+/* Hero About Section */
+.hero-about {
+  background: linear-gradient(
+      135deg,
+      /* Reduced opacity for more image visibility */ rgba(30, 60, 114, 0.6),
+      /* Was 0.9 */ rgba(42, 82, 152, 0.6) /* Was 0.9 */
+    ),
+    url("images2/ca5.webp") center/cover;
+  padding: 120px 0 100px;
+  margin-top: 40px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  object-position: top;
+  overflow: hidden;
+}
+
+.hero-about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    /* Reduced opacity for more image visibility */ rgba(30, 60, 114, 0.5),
+    /* Was 0.8 */ rgba(42, 82, 152, 0.5) /* Was 0.8 */
+  );
+  z-index: 1;
+}
+
+.hero-about .container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-about h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-about p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 1s ease-out 0.3s both;
+  margin-bottom: 0;
+}
+
+/* Main Content Styling */
+main.container {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  grid-template-areas: 
+  "m m"
+  "v v"
+  ;
+  margin-bottom: 4rem;
+}
+
+.mission {
+  grid-area: m;
+}
+
+.vision {
+  grid-area: v;
+}
+
+.mission,
+.vision {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.mission::before,
+.vision::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
+}
+
+.mission:hover,
+.vision:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.mission h3,
+.vision h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+}
+
+.mission i,
+.vision i {
+  color: #b69d4c;
+  font-size: 1.8rem;
+  padding: 12px;
+  background: rgba(255, 107, 53, 0.1);
+  border-radius: 50%;
+}
+
+.mission p,
+.vision p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 4rem;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+section h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #1e3c72;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+  position: relative;
+}
+
+section h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700 #b69d4c);
+  border-radius: 2px;
+}
+
+section h3 i {
+  color: #b69d4c;
+  font-size: 2rem;
+  padding: 15px;
+  background: rgba(255, 107, 53, 0.1);
+  border-radius: 50%;
+}
+
+/* Creed Container */
+.creed-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2.5rem;
+  border-radius: 15px;
+  border-left: 5px solid #b69d4c;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.creed-container::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: #b69d4c;
+  font-family: serif;
+  opacity: 0.3;
+}
+
+.creed-container strong {
+  display: block;
+  font-size: 1.3rem;
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+  font-family: "Manrope", sans-serif;
+}
+
+.creed-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.creed-container p::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #b69d4c;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.creed-container p:last-child {
+  margin-bottom: 0;
+}
+
+/* Who We Are Grid */
+.who-we-are-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.who-we-are-item {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(30, 60, 114, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.who-we-are-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #ffd700, #b69d4c);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.who-we-are-item:hover::before {
+  transform: scaleX(1);
+}
+
+.who-we-are-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(30, 60, 114, 0.15);
+  border-color: rgba(30, 60, 114, 0.2);
+}
+
+.who-we-are-item h4 {
+  color: #1e3c72;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.who-we-are-item p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Tablets (1024px and down) */
+@media screen and (max-width: 1024px) {
+  .hero-about h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-about p {
+    font-size: 1.2rem;
+  }
+
+  section h3 {
+    font-size: 1.8rem;
+  }
+
+  .mission,
+  .vision {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2.5rem;
+  }
+}
+
+/* Tablets (768px and down) */
+@media screen and (max-width: 768px) {
+  .hero-about {
+    padding: 120px 0 80px;
+  }
+
+  .hero-about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-about p {
+    font-size: 16px;
+  }
+
+  main.container {
+    padding: 60px 20px;
+  }
+
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .mission,
+  .vision {
+    padding: 2rem;
+  }
+
+  .mission h3,
+  .vision h3 {
+    font-size: 1.3rem;
+  }
+
+  .mission i,
+  .vision i {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  section {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  section h3 {
+    font-size: 1.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  section h3 i {
+    font-size: 1.8rem;
+    padding: 12px;
+  }
+
+  .creed-container {
+    padding: 2rem;
+  }
+
+  .creed-container strong {
+    font-size: 1.2rem;
+  }
+
+  .creed-container p {
+    font-size: 1.1rem;
+  }
+
+  .who-we-are-item {
+    padding: 2rem;
+  }
+
+  .who-we-are-item h4 {
+    font-size: 1.3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+
+/* Mobile Devices (480px and down) */
+@media screen and (max-width: 480px) {
+  .hero-about {
+    padding: 100px 0 60px;
+  }
+
+  .hero-about h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-about p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  main.container {
+    padding: 40px 15px;
+  }
+
+  .mission,
+  .vision {
+    padding: 1.5rem;
+  }
+
+  .mission h3,
+  .vision h3 {
+    font-size: 1.2rem;
+  }
+
+  .mission p,
+  .vision p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  section h3 {
+    font-size: 1.4rem;
+  }
+
+  section h3 i {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .creed-container {
+    padding: 1.5rem;
+  }
+
+  .creed-container strong {
+    font-size: 1.1rem;
+  }
+
+  .creed-container p {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+
+  .who-we-are-item {
+    padding: 1.5rem;
+  }
+
+  .who-we-are-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .who-we-are-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Extra Small Mobile (360px and down) */
+@media screen and (max-width: 360px) {
+  .hero-about h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-about p {
+    font-size: 0.95rem;
+  }
+
+  main.container {
+    padding: 30px 10px;
+  }
+
+  .mission,
+  .vision,
+  section,
+  .who-we-are-item {
+    padding: 1.2rem;
+  }
+
+  section h3 {
+    font-size: 1.3rem;
+  }
+
+  .creed-container {
+    padding: 1.2rem;
+  }
+}
+
+/* High-DPI Displays */
+@media screen and (min-width: 1200px) {
+  .hero-about h2 {
+    font-size: 3.5rem;
+  }
+
+  .hero-about p {
+    font-size: 1.4rem;
+  }
+
+  main.container {
+    padding: 100px 20px;
+  }
+
+  .mission,
+  .vision {
+    padding: 3rem;
+  }
+
+  section {
+    padding: 3.5rem;
+  }
+
+  .who-we-are-item {
+    padding: 3rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .hero-about {
+    background: none !important;
+    color: #000 !important;
+    padding: 20px 0 !important;
+  }
+
+  .mission,
+  .vision,
+  section,
+  .who-we-are-item {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    break-inside: avoid;
+  }
+
+  section h3 i,
+  .mission i,
+  .vision i {
+    display: none;
+  }
+}

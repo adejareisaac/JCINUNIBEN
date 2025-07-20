@@ -103,6 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
     loadingSpinner.classList.add("hidden"); // Hide after content loads
   }
 
+  // Fallback: Hide spinner after 3 seconds in case DOMContentLoaded fails or content is slow
+  setTimeout(() => {
+    if (loadingSpinner && !loadingSpinner.classList.contains("hidden")) {
+      loadingSpinner.classList.add("hidden");
+    }
+  }, 3000);
+
   // --- Header Scroll Effect ---
   const header = document.querySelector(".header");
   const heroSlideshow = document.querySelector(".hero-slideshow"); // Assuming hero is the first main section
