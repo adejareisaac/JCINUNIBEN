@@ -217,6 +217,10 @@ body {
   box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
 }
 
+a.cta-button {
+  font-size: 0.5rem;
+}
+
 /* Mobile Menu Toggle */
 .menu-toggle {
   display: none;
@@ -1830,7 +1834,7 @@ body {
     height: 90vh;
     margin-top: 7rem;
   }
-  
+
   .add-title {
     font-size: 2rem;
     transform: translateY(-40px);
@@ -1902,7 +1906,7 @@ font-family: "Manrope", sans-serif;
   }
 
   .add-para {
-    max-width: 90%;
+    max-width: 100%;
     text-align: center;
   }
 
@@ -1917,9 +1921,6 @@ font-family: "Manrope", sans-serif;
 
 }
   
-/* PRESIDENT'S MESSAGE START */
+/* PRESIDENT'S MESSAGE END */
 
 
-* {
-  /* outline: 1px solid red; */
-}
