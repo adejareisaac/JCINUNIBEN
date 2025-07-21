@@ -501,102 +501,7 @@ body {
 }
 */
 
-/* President's Message Section Start */
-.presidentsmessage {
-  background: #e5e5e5;
-  padding: 40px 0 20px 0; /* Reduce bottom padding for less space below */
-}
-
-.presidentsmessage h2 {
-  font-family: "Manrope", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #b7a520;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-.president-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px; /* Increase left/right padding for better centering */
-  box-sizing: border-box;
-}
-.president-text, .president-image {
-  min-width: 280px;
-  font-size: 1.25rem;
-  color: #111;
-}
-.fromthelop {
-  font-size: 3rem;
-  font-weight: bolder;
-  color: #0091da;
-  font-family: "Manrope", sans-serif;
-}
-.legacy-highlight {
-  color: #b7a520;
-  font-weight: bold;
-}
-.bricks-highlight {
-  color: #b7a520;
-  font-weight: bold;
-}
-.president-image {
-  flex: 0 1 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-.president-image img {
-  width: 340px;
-  height: 340px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 16px 16px 0 0;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-  background: #fff;
-}
-.president-info {
-  background: #b7a520;
-  color: #111;
-  width: 100%;
-  padding: 18px 0 12px 0;
-  text-align: center;
-  border-radius: 0 0 16px 16px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: -4px;
-}
-.president-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.president-title {
-  font-size: 1rem;
-  font-weight: 500;
-}
-@media (max-width: 900px) {
-  .president-container {
-    flex-direction: column;
-    gap: 24px;
-    /* width: 100%; */
-    padding: 0px 10px 0px 5px;
-
-  }
-  .president-image img {
-    width: 100%;
-    height: 260px;
-    max-width: 340px;
-  }
-}
-/* PRESIDENT'S MESSAGE START */
-
-/* ========================================
+/*========================================
    WHO WE ARE SECTION START
    ======================================== */
 .who-we-are {
@@ -1914,3 +1819,60 @@ body {
   }
 }
 
+/* President's Message Section Start */
+  .presidential-address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    margin-top: 2rem;
+  }
+  
+  .add-title {
+    font-size: 2rem;
+    transform: translateY(-40px);
+    color: black;
+    line-height: 1.9rem;
+  }
+
+  .add-title span {
+    color: black;
+  }
+
+  .add-para {
+    max-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
+    margin-bottom: 1rem;
+    color: #716d6d;
+  }
+
+  .img-container {
+    border-radius: 50%;
+    box-shadow: 4px 7px 5px 2px #bcbaba;
+}
+
+.header-img {
+    border-radius: 100%;
+    background: url(images1/2025president.jpg);
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+}
+
+.add-title span {
+font-family: "Manrope", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #003da5;
+  margin-top: 1.2rem;
+  position: relative;
+}
+
+.add-ending {
+  line-height: 1.5rem;
+}
+/* PRESIDENT'S MESSAGE START */
+
+/* 
