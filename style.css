@@ -322,7 +322,9 @@ body {
   line-height: 1.2;
   font-size: "Manrope", sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  white-space: nowrap;
+  white-space: normal;
+  box-sizing: border-box;
+  box-sizing: border-box;
   animation: fadeInUp 1s ease-out;
 }
 
@@ -1448,7 +1450,7 @@ body {
   }
 
   .nav-menu {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .logo img {
@@ -1917,4 +1919,7 @@ font-family: "Manrope", sans-serif;
   
 /* PRESIDENT'S MESSAGE START */
 
-/* 
+
+* {
+  /* outline: 1px solid red; */
+}
